@@ -136,7 +136,7 @@ metaReasoning (string): Analysis of how the token fits into current market meta 
 overallScore (number): The overall score given to the token (typically out of 100).
 overallReason (string): Comprehensive reasoning behind the overall score.
 
-# **SenseAI Framework Roadmap**
+# SenseAI Framework Roadmap  
 
 ## Core Platform Release
 - **Interactive Dashboard Frontend**
