@@ -257,12 +257,6 @@ Think you can add another layer of insanity to SenseAI? We're all ears! Here's h
 
 Join our mission to push the boundaries of crypto analysis and make SenseAI the most formidable tool in the blockchain jungle!
 
-## 🛡️ Security
-
-Your security is our priority. If you discover any vulnerabilities or have security-related concerns, please contact us immediately at:
-
-- **Email**: info@thesenseai.io
-
 ## 💬 Support
 
 Got questions, need help, or just want to share your excitement? Reach out to us through any of the following channels:
@@ -288,7 +282,7 @@ SenseAI Framework is licensed under the MIT License.
 
 For any inquiries or feedback, feel free to reach out:
 
-- **Email**: contact@thesenseai.fun
+- **Email**: info@thesenseai.fun
 - **Website**: [thesenseai.fun](https://thesenseai.fun)
 - **GitHub**: [github.com/TheSenseAI/SenseAI](https://github.com/TheSenseAI/SenseAI)
 
