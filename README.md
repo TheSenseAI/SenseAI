@@ -50,19 +50,6 @@ SenseAI isn't just another analytics tool; it's a revolution. Here's a breakdown
   
 - **Model Training and Deployment**: Train your own models with SenseAI’s infrastructure and deploy them directly within the framework, ensuring optimal performance and scalability.
 
-## 🌟 What's Coming Next: Roadmap Highlights
-
-We're not stopping here! The future of SenseAI is even more exhilarating. Here's a sneak peek into what's on the horizon:
-
-- **Decentralized Analytics Modules**: Transition some of our analytics to a decentralized architecture, ensuring data integrity and censorship resistance.
-  
-- **Cross-Chain Compatibility**: Expand our framework to support additional blockchain networks beyond Solana, opening up new avenues for token analysis and investment.
-  
-- **Enhanced AI Models**: Continuously refine and expand our AI models with new datasets and advanced algorithms to stay ahead of market dynamics.
-  
-- **Community-Driven Features**: Implement features and tools based on community feedback and contributions, fostering a collaborative ecosystem around SenseAI.
-  
-- **Mobile App Integration**: Develop mobile applications that bring SenseAI’s powerful analytics and alerts to your fingertips, anytime, anywhere.
 
 ## 🛠 Installation
 
@@ -85,6 +72,85 @@ cp .env.example .env
 # Launch the framework
 npm start
 ```
+
+# SenseAI Framework Roadmap
+
+## Core Platform Release
+- **Interactive Dashboard Frontend**
+- **Public API Access**
+- **Real-time Token Analysis Engine**
+- **Custom AI Token Estimation Models**
+
+### Initial Support for:
+- Solana Ecosystem
+- Pump.fun Tokens
+- Manual Analysis Tools
+- Programmatic AI Estimations
+
+## 🚀 February 2025
+
+### Advanced Agent Ecosystem Launch
+
+#### Wallet Analysis Agent
+- Deep wallet behavior analysis
+- Transaction pattern recognition
+- Risk scoring system
+- Whale movement tracking
+
+#### Portfolio Management Agent
+- Automated portfolio optimization
+- Risk assessment
+- Performance tracking
+- Rebalancing suggestions
+
+#### Code Analysis Agent
+- Smart contract security scanning
+- Code quality assessment
+- Vulnerability detection
+- Automated auditing features
+
+#### Website Analysis Agent
+- Project credibility scoring
+- Red flag detection
+- Domain history analysis
+- Team verification tools
+
+### Token Creation Suite
+
+#### Website Token Creation Agent
+- One-click token deployment
+- Custom tokenomics configuration
+- Automated smart contract generation
+- Built-in security features
+
+#### Custom Agent Development Platform
+- Agent creation toolkit
+- Custom logic implementation
+- Integration APIs
+- Community agent marketplace
+
+## 🌟 Q1 2025
+
+### Exchange Integration
+- **First CEX Listing**
+  - Major exchange partnership
+  - Native token launch
+  - Trading pairs establishment
+  - Liquidity pool creation
+
+### Strategic Integrations
+
+#### AI Framework Partnerships
+- OpenAI integration
+- Google AI tools compatibility
+- Custom ML model support
+- AI-powered trading strategies
+
+#### Solana Ecosystem Integration
+- Phantom Wallet integration
+- Solflare compatibility
+- Magic Eden partnership
+- Jupiter integration
 
 ## 📚 Detailed Documentation
 
@@ -118,8 +184,9 @@ Your security is our priority. If you discover any vulnerabilities or have secur
 
 Got questions, need help, or just want to share your excitement? Reach out to us through any of the following channels:
 
-- **Email**: support@senseai.fun
+- **Email**: support@thesenseai.fun
 - **Twitter**: [https://twitter.com/SenseAI_CrazyWorld)](https://x.com/SenseAIx)
+
 
 ## 📄 License
 
