@@ -73,7 +73,70 @@ cp .env.example .env
 npm start
 ```
 
-# SenseAI Framework Roadmap
+## 📖 API Documentation
+
+Unlock the full power of SenseAI by integrating our API into your own applications. Here's how you can get started:
+
+### **Endpoint: Analyze Token**
+
+#### `GET /analyze`
+
+This endpoint allows you to analyze a token by its mint address. It returns a comprehensive analysis, including market metrics, social metrics, and detailed AI-driven reasoning.
+
+#### **Example Request**
+
+```javascript
+fetch('https://thesenseai.fun/analyze?mint=YOUR_MINT_ADDRESS')
+  .then(response => response.json())
+  .then(data => console.log(data));
+Make sure to replace YOUR_MINT_ADDRESS with the actual mint address of the token you want to analyze.
+
+Parameters
+Parameter	Type	Description
+mint	string	Required. The token mint address to analyze
+Response Format
+json
+
+{
+  "name": "Token Name",
+  "address": "mint_address",
+  "marketMetrics": {
+    "marketCap": "$1000000",
+    "repliesAmount": "100",
+    "createdAt": "2024-01-08T00:00:00Z"
+  },
+  "socialMetrics": {
+    "aiViralityScore": "85/100",
+    "ideaQualityScore": "75/100",
+    "matchesMeta": "Yes"
+  },
+  "analysis": {
+    "viralityReasoning": "Analysis of viral potential...",
+    "qualityReasoning": "Quality assessment...",
+    "metaReasoning": "Meta trend analysis...",
+    "overallScore": 80,
+    "overallReason": "Comprehensive analysis..."
+  }
+}
+Response Details
+name (string): The name of the token.
+address (string): The mint address of the token.
+marketMetrics (object): Contains market-related metrics.
+marketCap (string): The market capitalization of the token.
+repliesAmount (string): The number of engagements or replies related to the token.
+createdAt (string): The creation date of the token in ISO 8601 format.
+socialMetrics (object): Contains social media and AI-assessed metrics.
+aiViralityScore (string): The AI-assessed virality score out of 100.
+ideaQualityScore (string): The AI-assessed quality score of the token's concept out of 100.
+matchesMeta (string): Indicates whether the token aligns with current market trends.
+analysis (object): Contains detailed AI-driven analysis.
+viralityReasoning (string): Explanation of the token's viral potential based on social metrics.
+qualityReasoning (string): Assessment of the token's idea quality.
+metaReasoning (string): Analysis of how the token fits into current market meta trends.
+overallScore (number): The overall score given to the token (typically out of 100).
+overallReason (string): Comprehensive reasoning behind the overall score.
+
+# **SenseAI Framework Roadmap**
 
 ## Core Platform Release
 - **Interactive Dashboard Frontend**
@@ -190,7 +253,7 @@ Got questions, need help, or just want to share your excitement? Reach out to us
 
 ## 📄 License
 
-SenseAI Framework is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+SenseAI Framework is licensed under the MIT License.
 
 ---
 
