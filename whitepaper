@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>SenseAI Whitepaper</title>
+    <style>
+        :root {
+            --primary: #10B981;
+            --secondary: #047857;
+            --background: #111827;
+            --card: #1F2937;
+            --text: #F9FAFB;
+            --accent: #8B5CF6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(at 40% 20%, hsla(128,100%,74%,0.1) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189,100%,56%,0.1) 0px, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .header-button {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-button:hover {
+            background: rgba(31, 41, 55, 0.9);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .whitepaper-section {
+            background: rgba(31, 41, 55, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo-container">
+    <img src="https://thesenseai.fun/remove2.png" alt="War Simulator AI Logo" class="header-logo">
+</div>
+    <h1>SenseAI</h1>
+    <p>Enter a token contract address or Pump.fun link to analyze its metrics and get AI-powered insights for it</p>
+    <div class="header-buttons">
+      <a href="https://github.com/TheSenseAI/SenseAI" class="header-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+        Github Code
+      </a>
+      <a href="https://pump.fun/" class="header-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Buy Token
+      </a>
+     <a href="https://x.com/senseaix" class="header-button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+    </svg>
+    Twitter
+</a>
+      <a href="/api.html" class="header-button">
+    API Docs
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+    </svg>
+</a>
+<a href="/whitepaper" class="header-button">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253M7.5 4.5v4m0 0h4m-4 0l4-4m0 0L8 7"/>
+    </svg>
+    Whitepaper
+</a>
+    </div>
+  </div>
+
+    <!-- Table of Contents -->
+    <div class="whitepaper-section toc">
+        <h2 class="section-title">Contents</h2>
+        <div class="section-content">
+            <ul>
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#challenges">Current Challenges</a></li>
+                <li><a href="#technology">Technology Overview</a></li>
+                <li><a href="#features">Core Features</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Abstract -->
+    <div id="abstract" class="whitepaper-section">
+        <h2 class="section-title">Abstract</h2>
+        <div class="section-content">
+            <p>Navigating the volatile and dynamic world of cryptocurrency markets, especially within ecosystems like
+            Solana and platforms like Pump.fun, presents numerous challenges. Investors and developers alike face 
+            difficulties in identifying credible tokens, understanding trends, and mitigating risks.</p>
+            
+            <p><span class="highlight">SenseAI</span> is an advanced AI-driven token analysis framework designed 
+            to bridge this gap. By leveraging cutting-edge AI models and real-time on-chain data, SenseAI empowers 
+            users to make data-driven decisions, offering an unmatched level of transparency, insight, and accuracy.</p>
+            
+            <p>SenseAI brings together the latest AI technologies to help users unlock valuable insights in real-time,
+            enabling smarter and safer investments. By combining real-time market data with predictive analytics,
+           SenseAI offers a unique approach to analyzing token potential.</p>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div id="introduction" class="whitepaper-section">
+        <h2 class="section-title">Introduction</h2>
+        <div class="section-content">
+            <p>The cryptocurrency industry continues to evolve rapidly, with <span class="highlight">Solana</span> 
+            emerging as a key player due to its high throughput and minimal transaction costs. However, this very 
+            innovation has resulted in a proliferation of tokens, many of which lack reliability or exhibit fraudulent 
+            behavior.</p>
+        </div>
+    </div>
+
+    <!-- Current Challenges -->
+    <div id="challenges" class="whitepaper-section">
+        <h2 class="section-title">Current Challenges in the Solana Ecosystem</h2>
+        <div class="section-content">
+            <ul class="challenge-list">
+                <li><span class="highlight">Rapid Token Growth:</span> The launch of numerous tokens daily makes it 
+                nearly impossible for users to keep up manually.</li>
+                <li><span class="highlight">Limited Evaluation Tools:</span> While basic tools exist, they fail to 
+                provide an exhaustive analysis of token behavior.</li>
+                <li><span class="highlight">Risk of Fraud:</span> Scams, including rug pulls and pump-and-dump schemes, 
+                remain a significant issue.</li>
+                <li><span class="highlight">Data Fragmentation:</span> On-chain and market-related data sources are 
+                often scattered, leaving users with incomplete insights.</li>
+            </ul>
+            
+            <p>SenseAI aims to tackle these challenges by offering a comprehensive AI-powered analysis platform that
+            simplifies token assessment and empowers users to make confident investment decisions.</p>
+        </div>
+    </div>
+    <!-- Technology Overview -->
+    <div id="technology" class="whitepaper-section">
+        <h2 class="section-title">Technology Overview</h2>
+        <div class="section-content">
+            <p>SenseAI architecture is built to ensure reliability, scalability, and deep insights. Its core components include:</p>
+            
+            <div class="tech-component">
+                <h3><span class="highlight">1. AI Engine</span></h3>
+                <ul class="feature-list">
+                    <li>Leverages machine learning models, including GPT-3.5 and Claude-2, to analyze token trends and predict performance</li>
+                    <li>Integrates with OpenRouter for advanced language processing</li>
+                </ul>
+            </div>
+
+            <div class="tech-component">
+                <h3><span class="highlight">2. Data Collection and Analysis</span></h3>
+                <ul class="feature-list">
+                    <li>Aggregates data from Solana's blockchain, Pump.fun APIs, and additional DeFi sources</li>
+                    <li>Performs real-time updates using WebSocket connections, ensuring immediate data availability</li>
+                </ul>
+            </div>
+
+            <div class="tech-component">
+                <h3><span class="highlight">3. Predictive Modeling</span></h3>
+                <ul class="feature-list">
+                    <li>AI-driven predictive models identify patterns in token behavior, market trends, and potential fraud signals</li>
+                </ul>
+            </div>
+
+            <div class="tech-component">
+                <h3><span class="highlight">4. Fraud Detection Algorithms</span></h3>
+                <ul class="feature-list">
+                    <li>Scans token contracts for vulnerabilities or potential exploitations</li>
+                    <li>Assesses developer activity and holder distributions for anomalies</li>
+                </ul>
+            </div>
+
+            <div class="tech-component">
+                <h3><span class="highlight">5. Advanced Metrics Dashboard</span></h3>
+                <ul class="feature-list">
+                    <li>Displays detailed analysis of token scores, virality, market cap, and liquidity trends</li>
+                    <li>Offers customizable filters for focused analysis</li>
+                </ul>
+            </div>
+
+            <div class="tech-component">
+                <h3><span class="highlight">6. API Gateway</span></h3>
+                <ul class="feature-list">
+                    <li>Allows developers to fetch data programmatically, enabling integrations with trading bots and portfolio management tools</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Features -->
+    <div id="features" class="whitepaper-section">
+        <h2 class="section-title">Core Features</h2>
+        <div class="section-content">
+            <p>SenseAI offers a wide range of features designed to meet the diverse needs of users in the cryptocurrency ecosystem:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3><span class="highlight">Token Scoring</span></h3>
+                    <p>Comprehensive evaluation across trustworthiness, liquidity, market cap, and holder activity</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3><span class="highlight">Community Sentiment Analysis</span></h3>
+                    <p>Monitors social media and community forums for sentiment trends related to tokens</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3><span class="highlight">Real-Time Alerts</span></h3>
+                    <p>Provides alerts for suspicious token activity or fraud signals</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3><span class="highlight">Portfolio Management</span></h3>
+                    <p>Offers tools for users to smartly manage their investments with extra valuable AI based insights about their bags</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3><span class="highlight">Ecosystem Compatibility</span></h3>
+                    <p>Supports integration with major crypto exchanges, including Pump.fun, Jupiter, Serum and Raydium</p>
+                </div>
+
+                <div class="feature-item">
+                    <h3><span class="highlight">Virality & Potential</span></h3>
+                    <p>Evaluates a token's overall potential using AI-driven analysis of virality, adoption metrics, and long-term growth indicators</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Use Cases -->
+    <div id="use-cases" class="whitepaper-section">
+        <h2 class="section-title">Use Cases</h2>
+        <div class="section-content">
+            <div class="use-case-grid">
+                <div class="use-case-item">
+                    <h3><span class="highlight">Retail Investors</span></h3>
+                    <ul class="feature-list">
+                        <li>Assess token risks and identify promising investments</li>
+                        <li>Use predictive models to avoid high-risk tokens</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-item">
+                    <h3><span class="highlight">Crypto Developers</span></h3>
+                    <ul class="feature-list">
+                        <li>Integrate SenseAI APIs into custom trading solutions</li>
+                        <li>Leverage real-time analytics for automated trading bots</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-item">
+                    <h3><span class="highlight">Institutional Investors</span></h3>
+                    <ul class="feature-list">
+                        <li>Perform due diligence on large-scale investments</li>
+                        <li>Evaluate risk profiles across multiple tokens simultaneously</li>
+                    </ul>
+                </div>
+                <div class="use-case-item">
+                    <h3><span class="highlight">DeFi Platform Operators</span></h3>
+                    <ul class="feature-list">
+                        <li>Optimize token listings based on AI-driven insights</li>
+                        <li>Monitor ecosystem health to maintain user trust and engagement.</li>
+                    </ul>
+                </div>
+
+                <div class="use-case-item">
+                    <h3><span class="highlight">Crypto Researchers</span></h3>
+                    <ul class="feature-list">
+                        <li>Identify emerging trends by analyzing historical and real-time data patterns</li>
+                        <li>Capitalize on early indicators of token growth or decline</li>
+                    </ul>
+                </div>
+
+
+                <div class="use-case-item">
+                    <h3><span class="highlight">Community Managers</span></h3>
+                    <ul class="feature-list">
+                        <li>Gauge sentiment and engagement metrics for community growth</li>
+                        <li>Align token development strategies with broader market trends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div id="roadmap" class="whitepaper-section">
+        <h2 class="section-title">Roadmap</h2>
+        <div class="section-content roadmap-timeline">
+            <div class="roadmap-item">
+                <h3><span class="highlight">LIVE</span></h3>
+                <ul class="feature-list">
+                    <li>Release of the core platform with Dashboard for Frontned & open up API functionality</li>
+                    <li>Initial focus on Solana and Pump.fun token analysis on tokens, allow manual and programmatic AI Token estimations</li>
+                </ul>
+            </div>
+
+            <div class="roadmap-item">
+                <h3><span class="highlight">February (2025)</span></h3>
+                <ul class="feature-list">
+                    <li>Launch of Wallet/Portfolio/Code & Website Analyser Agents </li>
+                    <li>Website Token Create & Deploy Agent and create own custom Agents </li>
+                </ul>
+            </div>
+
+            <div class="roadmap-item">
+                <h3><span class="highlight">Q1 (2025)</span></h3>
+                <ul class="feature-list">
+                    <li>First CEX (Centralized Exchange) listing</li>
+                    <li>Integration into major AI Frameworks & big Solana Wallets and Products</li>
+                </ul>
+            </div>
+
+            <div class="roadmap-item">
+                <h3><span class="highlight">Future Prospects</span></h3>
+                <ul class="feature-list">
+                    <li>Host Own Solana Hackathon in SenseAI Style</li>
+                    <li>Native Integrations into Providers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div id="conclusion" class="whitepaper-section">
+        <h2 class="section-title">Conclusion</h2>
+        <div class="section-content">
+            <p>SenseAI sets a new benchmark in token analytics by combining AI, real-time data, and blockchain
+            technology. By enabling users to gain actionable insights into the volatile cryptocurrency market, it ensures
+            smarter, safer, and more informed investment decisions.</p>
+            
+            <p>Join us on this journey to revolutionize token analysis and redefine the way the world navigates the 
+            crypto ecosystem.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Additional styles for new components */
+.tech-component, .feature-item, .use-case-item, .roadmap-item {
+    background: rgba(31, 41, 55, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-component:hover, .feature-item:hover, .use-case-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.feature-grid, .use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.feature-list li:before {
+    content: "→";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+.roadmap-timeline {
+    position: relative;
+}
+
+.roadmap-item {
+    position: relative;
+    margin-left: 30px;
+}
+
+.roadmap-item:before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .feature-grid, .use-case-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
