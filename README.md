@@ -178,14 +178,14 @@ Join our mission to push the boundaries of crypto analysis and make SenseAI the 
 
 Your security is our priority. If you discover any vulnerabilities or have security-related concerns, please contact us immediately at:
 
-- **Email**: security@senseai.io
+- **Email**: security@thesenseai.io
 
 ## 💬 Support
 
 Got questions, need help, or just want to share your excitement? Reach out to us through any of the following channels:
 
 - **Email**: support@thesenseai.fun
-- **Twitter**: [https://twitter.com/SenseAI_CrazyWorld)](https://x.com/SenseAIx)
+- **Twitter**: https://x.com/SenseAIx
 
 
 ## 📄 License
