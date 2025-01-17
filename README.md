@@ -50,7 +50,6 @@ SenseAI isn't just another analytics tool; it's a revolution. Here's a breakdown
   
 - **Model Training and Deployment**: Train your own models with SenseAI’s infrastructure and deploy them directly within the framework, ensuring optimal performance and scalability.
 
-
 ## 🛠 Installation
 
 Ready to dive deeper into the madness? Here's how to get started:
@@ -89,14 +88,19 @@ This endpoint allows you to analyze a token by its mint address. It returns a co
 fetch('https://thesenseai.fun/analyze?mint=YOUR_MINT_ADDRESS')
   .then(response => response.json())
   .then(data => console.log(data));
-Make sure to replace YOUR_MINT_ADDRESS with the actual mint address of the token you want to analyze.
+```
 
-Parameters
-Parameter	Type	Description
-mint	string	Required. The token mint address to analyze
-Response Format
-json
+*Make sure to replace `YOUR_MINT_ADDRESS` with the actual mint address of the token you want to analyze.*
 
+#### **Parameters**
+
+| Parameter | Type   | Description                                      |
+|-----------|--------|--------------------------------------------------|
+| `mint`    | string | **Required.** The token mint address to analyze  |
+
+#### **Response Format**
+
+```json
 {
   "name": "Token Name",
   "address": "mint_address",
@@ -118,33 +122,40 @@ json
     "overallReason": "Comprehensive analysis..."
   }
 }
-Response Details
-name (string): The name of the token.
-address (string): The mint address of the token.
-marketMetrics (object): Contains market-related metrics.
-marketCap (string): The market capitalization of the token.
-repliesAmount (string): The number of engagements or replies related to the token.
-createdAt (string): The creation date of the token in ISO 8601 format.
-socialMetrics (object): Contains social media and AI-assessed metrics.
-aiViralityScore (string): The AI-assessed virality score out of 100.
-ideaQualityScore (string): The AI-assessed quality score of the token's concept out of 100.
-matchesMeta (string): Indicates whether the token aligns with current market trends.
-analysis (object): Contains detailed AI-driven analysis.
-viralityReasoning (string): Explanation of the token's viral potential based on social metrics.
-qualityReasoning (string): Assessment of the token's idea quality.
-metaReasoning (string): Analysis of how the token fits into current market meta trends.
-overallScore (number): The overall score given to the token (typically out of 100).
-overallReason (string): Comprehensive reasoning behind the overall score.
+```
 
-# SenseAI Framework Roadmap  
+#### **Response Details**
+
+- **`name`** *(string)*: The name of the token.
+- **`address`** *(string)*: The mint address of the token.
+- **`marketMetrics`** *(object)*: Contains market-related metrics.
+  - **`marketCap`** *(string)*: The market capitalization of the token.
+  - **`repliesAmount`** *(string)*: The number of engagements or replies related to the token.
+  - **`createdAt`** *(string)*: The creation date of the token in ISO 8601 format.
+- **`socialMetrics`** *(object)*: Contains social media and AI-assessed metrics.
+  - **`aiViralityScore`** *(string)*: The AI-assessed virality score out of 100.
+  - **`ideaQualityScore`** *(string)*: The AI-assessed quality score of the token's concept out of 100.
+  - **`matchesMeta`** *(string)*: Indicates whether the token aligns with current market trends.
+- **`analysis`** *(object)*: Contains detailed AI-driven analysis.
+  - **`viralityReasoning`** *(string)*: Explanation of the token's viral potential based on social metrics.
+  - **`qualityReasoning`** *(string)*: Assessment of the token's idea quality.
+  - **`metaReasoning`** *(string)*: Analysis of how the token fits into current market meta trends.
+  - **`overallScore`** *(number)*: The overall score given to the token (typically out of 100).
+  - **`overallReason`** *(string)*: Comprehensive reasoning behind the overall score.
+
+---
+
+# SenseAI Framework Roadmap
 
 ## Core Platform Release
+
 - **Interactive Dashboard Frontend**
 - **Public API Access**
 - **Real-time Token Analysis Engine**
 - **Custom AI Token Estimation Models**
 
 ### Initial Support for:
+
 - Solana Ecosystem
 - Pump.fun Tokens
 - Manual Analysis Tools
@@ -154,39 +165,45 @@ overallReason (string): Comprehensive reasoning behind the overall score.
 
 ### Advanced Agent Ecosystem Launch
 
-#### Wallet Analysis Agent
+#### **Wallet Analysis Agent**
+
 - Deep wallet behavior analysis
 - Transaction pattern recognition
 - Risk scoring system
 - Whale movement tracking
 
-#### Portfolio Management Agent
+#### **Portfolio Management Agent**
+
 - Automated portfolio optimization
 - Risk assessment
 - Performance tracking
 - Rebalancing suggestions
 
-#### Code Analysis Agent
+#### **Code Analysis Agent**
+
 - Smart contract security scanning
 - Code quality assessment
 - Vulnerability detection
 - Automated auditing features
 
-#### Website Analysis Agent
+#### **Website Analysis Agent**
+
 - Project credibility scoring
 - Red flag detection
 - Domain history analysis
 - Team verification tools
 
-### Token Creation Suite
+### **Token Creation Suite**
 
-#### Website Token Creation Agent
+#### **Website Token Creation Agent**
+
 - One-click token deployment
 - Custom tokenomics configuration
 - Automated smart contract generation
 - Built-in security features
 
-#### Custom Agent Development Platform
+#### **Custom Agent Development Platform**
+
 - Agent creation toolkit
 - Custom logic implementation
 - Integration APIs
@@ -195,6 +212,7 @@ overallReason (string): Comprehensive reasoning behind the overall score.
 ## 🌟 Q1 2025
 
 ### Exchange Integration
+
 - **First CEX Listing**
   - Major exchange partnership
   - Native token launch
@@ -203,13 +221,15 @@ overallReason (string): Comprehensive reasoning behind the overall score.
 
 ### Strategic Integrations
 
-#### AI Framework Partnerships
+#### **AI Framework Partnerships**
+
 - OpenAI integration
 - Google AI tools compatibility
 - Custom ML model support
 - AI-powered trading strategies
 
-#### Solana Ecosystem Integration
+#### **Solana Ecosystem Integration**
+
 - Phantom Wallet integration
 - Solflare compatibility
 - Magic Eden partnership
@@ -217,7 +237,7 @@ overallReason (string): Comprehensive reasoning behind the overall score.
 
 ## 📚 Detailed Documentation
 
-Need to navigate the intricate functionalities of SenseAI? Our https://thesenseai.fun/api.html has everything you need:
+Need to navigate the intricate functionalities of SenseAI? Our [comprehensive documentation](https://thesenseai.fun/api.html) has everything you need:
 
 - **Getting Started Guides**
 - **API References**
@@ -248,8 +268,7 @@ Your security is our priority. If you discover any vulnerabilities or have secur
 Got questions, need help, or just want to share your excitement? Reach out to us through any of the following channels:
 
 - **Email**: support@thesenseai.fun
-- **Twitter**: https://x.com/SenseAIx
-
+- **Twitter**: [@SenseAIx](https://x.com/SenseAIx)
 
 ## 📄 License
 
@@ -270,9 +289,11 @@ SenseAI Framework is licensed under the MIT License.
 For any inquiries or feedback, feel free to reach out:
 
 - **Email**: contact@thesenseai.fun
-- **Website**: https://thesenseai.fun
-- **GitHub**: https://github.com/TheSenseAI/SenseAI
+- **Website**: [thesenseai.fun](https://thesenseai.fun)
+- **GitHub**: [github.com/TheSenseAI/SenseAI](https://github.com/TheSenseAI/SenseAI)
 
 ---
 
 Stay connected, stay informed, and stay ahead with SenseAI Framework!
+
+--
